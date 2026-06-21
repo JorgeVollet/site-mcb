@@ -1,0 +1,216 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Bw Modelica';
+  src: url('/fonts/bwmodelica-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Bw Modelica';
+  src: url('/fonts/bwmodelica-medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Bw Modelica';
+  src: url('/fonts/bwmodelica-bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Bw Modelica';
+  src: url('/fonts/bwmodelica-extrabold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Juicy Pro';
+  src: url('/fonts/juicypro.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #f6f3ee;
+  color: #252019;
+  font-family: 'Bw Modelica', system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: #b47b53;
+  color: #fff;
+}
+
+/* Scrollbar fino */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #ececeb;
+}
+::-webkit-scrollbar-thumb {
+  background: #bcbcb9;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #989898;
+}
+
+@layer components {
+  /* Botão primário com brilho que percorre */
+  .btn-primary {
+    @apply relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full bg-ink px-8 py-4 text-sm font-medium uppercase tracking-widest text-cream transition-all duration-300;
+  }
+  .btn-primary::after {
+    content: '';
+    @apply absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/25 to-transparent;
+    transition: transform 0.7s ease;
+  }
+  .btn-primary:hover::after {
+    @apply translate-x-full;
+  }
+  .btn-primary:hover {
+    @apply shadow-glow;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-wood-500/60 px-8 py-4 text-sm font-medium uppercase tracking-widest text-ink transition-all duration-300 hover:border-wood-500 hover:bg-wood-500 hover:text-white;
+  }
+
+  .eyebrow {
+    @apply text-xs font-medium uppercase tracking-widest2 text-wood-600;
+  }
+
+  /* Linha divisória decorativa cinza (quebra estilo logo) */
+  .divider-gray {
+    @apply h-px w-full bg-gradient-to-r from-transparent via-mcb-gray to-transparent;
+  }
+}
+
+/* Glow estático de fundo das seções */
+.glow-wood {
+  background: radial-gradient(circle, rgba(180, 123, 83, 0.22) 0%, transparent 70%);
+}
+.glow-gray {
+  background: radial-gradient(circle, rgba(152, 152, 152, 0.25) 0%, transparent 70%);
+}
+
+/* ===== Marquee de destaques (desliza horizontal, desacelera no hover) ===== */
+@keyframes mcb-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: mcb-marquee 70s linear infinite;
+  will-change: transform;
+}
+/* ao passar o mouse, PAUSA suave exatamente onde está (sem pulo) */
+.marquee-viewport:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* ===== Borda com glow correndo (conic gradient girando) ===== */
+@property --mcb-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes mcb-rotate {
+  to {
+    --mcb-angle: 360deg;
+  }
+}
+
+/* Card com luz percorrendo a borda no hover */
+.glow-border {
+  position: relative;
+  isolation: isolate;
+}
+.glow-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 3px; /* espessura da borda */
+  background: conic-gradient(
+    from var(--mcb-angle),
+    transparent 0%,
+    transparent 42%,
+    rgba(224, 182, 138, 0.5) 58%,
+    #e0b68a 70%,
+    #f3dcc0 80%,
+    #b47b53 90%,
+    transparent 100%
+  );
+  /* mostra só a borda (recorta o miolo) */
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
+  z-index: 2;
+  filter: drop-shadow(0 0 6px rgba(224, 182, 138, 0.7));
+}
+.glow-border:hover::before {
+  opacity: 1;
+  animation: mcb-rotate 6s linear infinite;
+}
+/* halo de brilho cobre ao redor no hover (maior e mais suave) */
+.glow-border::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  box-shadow: 0 0 0 0 rgba(180, 123, 83, 0);
+  transition: box-shadow 0.6s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+.glow-border:hover::after {
+  box-shadow: 0 0 60px 6px rgba(180, 123, 83, 0.55);
+}
+
+/* Respeita usuários que preferem menos movimento */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

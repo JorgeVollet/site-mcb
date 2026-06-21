@@ -1,0 +1,40 @@
+# Dependências
+node_modules
+dist
+dist-ssr
+*.local
+
+# Variáveis de ambiente (contém credenciais!)
+.env
+.env.*
+!.env.example
+
+# Sistema
+.DS_Store
+*.log
+npm-debug.log*
+
+# Deploy
+.vercel
+
+# Arquivos temporários / previews
+_preview_*
+_PNG_*
+_OCT_*
+_OB_*
+_CAPAS*
+_c_abr*
+_sel_*
+_contato*
+_video_*
+
+# Zips grandes (fontes de fotos, não vão pro repo)
+*.zip
+
+# Vídeo bruto
+*.webm
+
+# PNGs originais grandes não usados pelo site (o site usa /destaques otimizado)
+public/fotos/ChatGPT*.png
+public/fotos/[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]-*.png
+public/fotos/faixadamcb.png
