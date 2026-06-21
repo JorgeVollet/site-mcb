@@ -17,7 +17,7 @@ export default function Depoimentos() {
   return (
     <section
       id="depoimentos"
-      className="relative overflow-hidden bg-cream py-24 sm:py-32"
+      className="relative overflow-hidden bg-cream py-16 sm:py-24 lg:py-32"
     >
       <div className="glow-gray pointer-events-none absolute -left-20 top-1/3 h-80 w-80 rounded-full blur-3xl" />
 
@@ -26,13 +26,13 @@ export default function Depoimentos() {
           <span className="eyebrow">Quem confia, recomenda</span>
         </Reveal>
         <Reveal delay={0.1}>
-          <h2 className="mt-4 font-display text-4xl leading-tight text-ink sm:text-5xl">
+          <h2 className="mt-4 font-display text-3xl leading-tight text-ink sm:text-5xl">
             O que dizem nossos clientes
           </h2>
         </Reveal>
 
         <Reveal delay={0.15}>
-          <div className="relative mt-14 min-h-[260px]">
+          <div className="relative mt-10 sm:mt-14">
             <Quote
               size={64}
               className="mx-auto text-wood-500/20"
@@ -47,7 +47,7 @@ export default function Depoimentos() {
                 transition={{ duration: 0.5 }}
                 className="mx-auto max-w-2xl"
               >
-                <p className="font-display text-2xl leading-relaxed text-ink sm:text-3xl">
+                <p className="font-display text-xl leading-relaxed text-ink sm:text-3xl">
                   "{d.texto}"
                 </p>
                 <div className="mt-8 flex items-center justify-center gap-1">
@@ -64,7 +64,6 @@ export default function Depoimentos() {
           </div>
         </Reveal>
 
-        {/* Indicadores */}
         <div className="mt-8 flex items-center justify-center gap-2">
           {depoimentos.map((_, k) => (
             <button

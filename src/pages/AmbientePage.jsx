@@ -30,8 +30,8 @@ export default function AmbientePage() {
   return (
     <>
       <Navbar />
-      <main className="bg-cream pt-32">
-        <section className="mx-auto max-w-7xl px-5 pb-24 sm:px-8 sm:pb-32">
+      <main className="bg-cream pt-28 sm:pt-32">
+        <section className="mx-auto max-w-7xl px-5 pb-16 sm:px-8 sm:pb-24 lg:pb-32">
           <Link
             to="/ambientes"
             className="inline-flex items-center gap-2 text-sm font-medium uppercase tracking-widest text-mcb-gray-500 transition-colors hover:text-wood-600"
@@ -44,10 +44,10 @@ export default function AmbientePage() {
             <h1 className="mt-3 font-display text-4xl leading-tight text-ink sm:text-6xl">
               {amb.nome}
             </h1>
-            <p className="mt-4 max-w-xl text-lg text-mcb-gray-600">{amb.descricao}</p>
+            <p className="mt-4 max-w-xl text-base text-mcb-gray-600 sm:text-lg">{amb.descricao}</p>
           </div>
 
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-12 grid gap-5 sm:mt-14 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
             {amb.projetos.map((proj, i) => (
               <motion.div
                 key={proj.slug}
@@ -58,7 +58,7 @@ export default function AmbientePage() {
               >
                 <Link
                   to={`/ambientes/${amb.slug}/${proj.slug}`}
-                  className="glow-border group relative block h-[380px] overflow-hidden rounded-xl bg-neutral-900"
+                  className="glow-border group relative block h-[300px] overflow-hidden rounded-xl bg-neutral-900 sm:h-[380px]"
                 >
                   <img
                     src={proj.fotos[0]}

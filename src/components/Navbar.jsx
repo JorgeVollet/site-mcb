@@ -57,7 +57,7 @@ export default function Navbar() {
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 sm:px-8">
         <Link to="/" className="transition-opacity duration-300 hover:opacity-80">
-          <Logo className="h-10" variant={scrolled || !naHome ? 'dark' : 'light'} />
+          <Logo className="h-9 sm:h-10" variant={scrolled || !naHome ? 'dark' : 'light'} />
         </Link>
 
         <ul className="hidden items-center gap-8 lg:flex">
@@ -131,7 +131,7 @@ export default function Navbar() {
 
         <button
           onClick={() => setAberto((v) => !v)}
-          className={`flex h-10 w-10 items-center justify-center rounded-full transition-colors duration-500 lg:hidden ${
+          className={`flex h-11 w-11 items-center justify-center rounded-full transition-colors duration-500 lg:hidden ${
             scrolled || !naHome ? 'text-ink' : 'text-cream'
           }`}
           aria-label="Abrir menu"

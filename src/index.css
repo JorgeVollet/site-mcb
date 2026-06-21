@@ -80,7 +80,7 @@ body {
 }
 
 @layer components {
-  /* Botão primário com brilho que percorre */
+  /* Botao primario com brilho que percorre */
   .btn-primary {
     @apply relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full bg-ink px-8 py-4 text-sm font-medium uppercase tracking-widest text-cream transition-all duration-300;
   }
@@ -104,13 +104,13 @@ body {
     @apply text-xs font-medium uppercase tracking-widest2 text-wood-600;
   }
 
-  /* Linha divisória decorativa cinza (quebra estilo logo) */
+  /* Linha divisoria decorativa cinza (quebra estilo logo) */
   .divider-gray {
     @apply h-px w-full bg-gradient-to-r from-transparent via-mcb-gray to-transparent;
   }
 }
 
-/* Glow estático de fundo das seções */
+/* Glow estatico de fundo das secoes */
 .glow-wood {
   background: radial-gradient(circle, rgba(180, 123, 83, 0.22) 0%, transparent 70%);
 }
@@ -118,7 +118,7 @@ body {
   background: radial-gradient(circle, rgba(152, 152, 152, 0.25) 0%, transparent 70%);
 }
 
-/* ===== Marquee de destaques (desliza horizontal, desacelera no hover) ===== */
+/* ===== Marquee de destaques ===== */
 @keyframes mcb-marquee {
   from {
     transform: translateX(0);
@@ -133,7 +133,6 @@ body {
   animation: mcb-marquee 70s linear infinite;
   will-change: transform;
 }
-/* ao passar o mouse, PAUSA suave exatamente onde está (sem pulo) */
 .marquee-viewport:hover .marquee-track {
   animation-play-state: paused;
 }
@@ -161,7 +160,7 @@ body {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  padding: 3px; /* espessura da borda */
+  padding: 3px;
   background: conic-gradient(
     from var(--mcb-angle),
     transparent 0%,
@@ -172,7 +171,6 @@ body {
     #b47b53 90%,
     transparent 100%
   );
-  /* mostra só a borda (recorta o miolo) */
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
@@ -191,7 +189,6 @@ body {
   opacity: 1;
   animation: mcb-rotate 6s linear infinite;
 }
-/* halo de brilho cobre ao redor no hover (maior e mais suave) */
 .glow-border::after {
   content: '';
   position: absolute;
@@ -206,7 +203,7 @@ body {
   box-shadow: 0 0 60px 6px rgba(180, 123, 83, 0.55);
 }
 
-/* Respeita usuários que preferem menos movimento */
+/* Respeita usuarios que preferem menos movimento */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;

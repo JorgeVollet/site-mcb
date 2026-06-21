@@ -10,20 +10,20 @@ export default function AmbientesPage() {
   return (
     <>
       <Navbar />
-      <main className="bg-cream pt-32">
-        <section className="mx-auto max-w-7xl px-5 pb-24 sm:px-8 sm:pb-32">
+      <main className="bg-cream pt-28 sm:pt-32">
+        <section className="mx-auto max-w-7xl px-5 pb-16 sm:px-8 sm:pb-24 lg:pb-32">
           <div className="text-center">
             <span className="eyebrow">Nossos trabalhos</span>
             <h1 className="mt-4 font-display text-4xl leading-tight text-ink sm:text-6xl">
               Ambientes
             </h1>
-            <p className="mx-auto mt-5 max-w-xl text-lg text-mcb-gray-600">
+            <p className="mx-auto mt-5 max-w-xl text-base text-mcb-gray-600 sm:text-lg">
               Explore nossos projetos por ambiente. Cada espaço, pensado e
               executado sob medida.
             </p>
           </div>
 
-          <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-12 grid gap-5 sm:mt-16 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
             {ambientes.map((amb, i) => (
               <motion.div
                 key={amb.slug}
@@ -34,7 +34,7 @@ export default function AmbientesPage() {
               >
                 <Link
                   to={`/ambientes/${amb.slug}`}
-                  className="glow-border group relative block h-[360px] overflow-hidden rounded-xl bg-neutral-900"
+                  className="glow-border group relative block h-[300px] overflow-hidden rounded-xl bg-neutral-900 sm:h-[360px]"
                 >
                   <img
                     src={amb.capa}

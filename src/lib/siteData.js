@@ -3,7 +3,7 @@
 export const empresa = {
   nome: 'Móveis Castelo Branco',
   sigla: 'MCB',
-  fundacao: 1998,
+  fundacao: 1989,
   fundador: 'Ademir Luís Noronha',
   cidade: 'Três de Maio',
   estado: 'RS',
@@ -26,6 +26,12 @@ export const contatos = [
     cargo: 'Projetista',
     whatsapp: '5555999942637',
     whatsappLabel: '(55) 9 9994-2637',
+  },
+  {
+    nome: 'Lediomar',
+    cargo: 'Projetista',
+    whatsapp: '5555997238533',
+    whatsappLabel: '(55) 9 9723-8533',
   },
 ]
 

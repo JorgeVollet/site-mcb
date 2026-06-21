@@ -31,8 +31,8 @@ export default function App() {
         <Hero />
         <Sobre />
         <Pilares />
-        <Ambientes />
         <Destaques />
+        <Ambientes />
         <Depoimentos />
         <Contato />
       </main>

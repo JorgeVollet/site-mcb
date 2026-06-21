@@ -1,5 +1,5 @@
 import Logo from '../components/Logo'
-import { empresa } from '../lib/siteData'
+import { empresa, contatos } from '../lib/siteData'
 
 const navItens = [
   { label: 'Sobre', href: '#sobre' },
@@ -44,6 +44,18 @@ export default function Footer() {
             </h4>
             <ul className="mt-4 space-y-2.5 text-sm">
               <li>{empresa.telefoneFixo}</li>
+              {contatos.map((c) => (
+                <li key={c.whatsapp}>
+                  <a
+                    href={`https://wa.me/${c.whatsapp}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transition-colors hover:text-wood-400"
+                  >
+                    {c.nome} · {c.whatsappLabel}
+                  </a>
+                </li>
+              ))}
               <li>
                 <a
                   href={`mailto:${empresa.email}`}

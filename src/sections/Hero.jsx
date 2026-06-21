@@ -21,7 +21,7 @@ export default function Hero() {
       ref={ref}
       className="relative flex min-h-[100svh] items-center justify-center overflow-hidden bg-[#1a1410]"
     >
-      {/* Fundo: foto real de cozinha planejada MCB com leve zoom + parallax */}
+      {/* Fundo: foto real com leve zoom + parallax */}
       <motion.div
         style={{ y: yFoto }}
         initial={{ scale: 1.12 }}
@@ -30,7 +30,7 @@ export default function Hero() {
         className="absolute inset-0 z-0"
       >
         <img
-          src="/fotos/cozinha-ilha-clara.jpg"
+          src="/fotos/hero-sala.jpg"
           alt=""
           aria-hidden="true"
           className="h-full w-full object-cover"
@@ -48,21 +48,21 @@ export default function Hero() {
       {/* Conteúdo central */}
       <motion.div
         style={{ y: yTexto, opacity }}
-        className="relative z-10 mx-auto max-w-4xl px-5 pt-24 text-center sm:px-8"
+        className="relative z-10 mx-auto w-full max-w-4xl px-5 pb-16 pt-28 text-center sm:px-8 sm:pt-24"
       >
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="mb-8 inline-flex items-center gap-2 rounded-full border border-wood-300/30 bg-black/20 px-5 py-2 backdrop-blur-md"
+          className="mb-6 inline-flex items-center gap-2 rounded-full border border-wood-300/30 bg-black/20 px-4 py-1.5 backdrop-blur-md sm:mb-8 sm:px-5 sm:py-2"
         >
           <Sparkles size={14} className="text-wood-300" />
-          <span className="text-xs font-medium uppercase tracking-widest2 text-wood-100">
-            Marcenaria sob medida · desde 1998
+          <span className="text-[10px] font-medium uppercase tracking-widest2 text-wood-100 sm:text-xs">
+            Marcenaria sob medida · desde 1989
           </span>
         </motion.div>
 
-        <h1 className="font-display text-5xl leading-[1.04] text-cream drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)] sm:text-6xl lg:text-7xl">
+        <h1 className="font-display text-4xl leading-[1.08] text-cream drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)] sm:text-6xl sm:leading-[1.04] lg:text-7xl">
           <RevealWord delay={0.15}>Perfeição na</RevealWord>
           <RevealWord delay={0.28}>
             <span className="text-wood-300">medida</span> do seu sonho
@@ -73,45 +73,42 @@ export default function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="mx-auto mt-8 max-w-xl text-lg leading-relaxed text-cream/90 drop-shadow-[0_1px_10px_rgba(0,0,0,0.6)]"
+          className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-cream/90 drop-shadow-[0_1px_10px_rgba(0,0,0,0.6)] sm:mt-8 sm:text-lg"
         >
-          Móveis planejados e sob medida, feitos de forma artesanal nos mínimos
-          detalhes — do clássico ao mais moderno.
+          Móveis sob medida, feitos nos mínimos detalhes — do clássico ao
+          moderno.
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.64 }}
-          className="mt-10 flex flex-wrap items-center justify-center gap-4"
+          className="mt-8 flex flex-col items-center justify-center gap-3 sm:mt-10 sm:flex-row sm:gap-4"
         >
           <MagneticButton
             href="#contato"
-            className="btn-primary bg-wood-500 text-white"
+            className="btn-primary w-full bg-wood-500 text-white sm:w-auto"
           >
             Solicitar orçamento
             <ArrowRight size={16} />
           </MagneticButton>
           <a
             href="#portfolio"
-            className="inline-flex items-center justify-center gap-2 rounded-full border border-cream/40 bg-black/10 px-8 py-4 text-sm font-medium uppercase tracking-widest text-cream backdrop-blur-sm transition-all duration-300 hover:border-cream hover:bg-cream hover:text-ink"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-cream/40 bg-black/10 px-8 py-4 text-sm font-medium uppercase tracking-widest text-cream backdrop-blur-sm transition-all duration-300 hover:border-cream hover:bg-cream hover:text-ink sm:w-auto"
           >
             Ver projetos
           </a>
         </motion.div>
 
-        {/* Estatísticas com count-up em destaque — sempre na mesma linha (4 colunas) */}
+        {/* Estatísticas: 2x2 no mobile, 4 colunas no desktop */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-16 grid grid-cols-4 items-start gap-x-5 sm:gap-x-14 lg:-ml-[90px] lg:gap-x-20"
+          className="mx-auto mt-12 grid max-w-md grid-cols-2 gap-x-6 gap-y-7 sm:mt-16 sm:max-w-none sm:grid-cols-4 sm:gap-x-12 lg:gap-x-16"
         >
-          {estatisticas.map((s, i) => (
-            <div key={s.label} className="relative px-1 text-center">
-              {i > 0 && (
-                <span className="absolute -left-2.5 top-1 hidden h-14 w-px bg-gradient-to-b from-transparent via-wood-300/40 to-transparent sm:left-[-1.75rem] sm:block lg:left-[-2.5rem]" />
-              )}
+          {estatisticas.map((s) => (
+            <div key={s.label} className="text-center">
               <div
                 className={`font-display leading-none text-wood-300 drop-shadow-[0_2px_12px_rgba(0,0,0,0.5)] ${
                   s.texto
@@ -130,7 +127,7 @@ export default function Hero() {
                   />
                 )}
               </div>
-              <div className="mt-2.5 text-[9px] font-medium uppercase leading-tight tracking-widest text-cream/75 sm:text-[11px]">
+              <div className="mt-2 text-[10px] font-medium uppercase leading-tight tracking-widest text-cream/75 sm:text-[11px]">
                 {s.label}
               </div>
             </div>
@@ -138,12 +135,12 @@ export default function Hero() {
         </motion.div>
       </motion.div>
 
-      {/* Indicador de scroll */}
+      {/* Indicador de scroll — só no desktop (no mobile sobrepunha os stats) */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2 }}
-        className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2"
+        className="absolute bottom-8 left-1/2 z-10 hidden -translate-x-1/2 sm:block"
       >
         <motion.div
           animate={{ y: [0, 8, 0] }}

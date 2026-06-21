@@ -36,7 +36,7 @@ export default function Destaques() {
   }, [])
 
   return (
-    <section id="portfolio" className="relative overflow-hidden bg-mcb-gray-50 py-24 sm:py-32">
+    <section id="portfolio" className="relative overflow-hidden bg-mcb-gray-50 py-16 sm:py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
           <div>
@@ -44,7 +44,7 @@ export default function Destaques() {
               <span className="eyebrow">Nossos trabalhos</span>
             </Reveal>
             <Reveal delay={0.1}>
-              <h2 className="mt-4 font-display text-4xl leading-tight text-ink sm:text-5xl">
+              <h2 className="mt-4 font-display text-3xl leading-tight text-ink sm:text-5xl">
                 Destaques em movimento
               </h2>
             </Reveal>
@@ -58,15 +58,15 @@ export default function Destaques() {
       </div>
 
       <div
-        className="relative mt-14 w-full overflow-hidden"
+        className="relative mt-10 w-full overflow-hidden sm:mt-14"
         onMouseEnter={() => (alvoRef.current = 0.6)}
         onMouseLeave={() => (alvoRef.current = 1.2)}
       >
-        <div ref={trackRef} className="flex w-max gap-5">
+        <div ref={trackRef} className="flex w-max gap-4 sm:gap-5">
           {loop.map((d, i) => (
             <div
               key={i}
-              className="group relative aspect-[16/9] h-[300px] shrink-0 overflow-hidden rounded-2xl bg-neutral-900 sm:h-[380px]"
+              className="group relative aspect-[16/9] h-[200px] shrink-0 overflow-hidden rounded-2xl bg-neutral-900 sm:h-[380px]"
             >
               <img
                 src={d.src}
@@ -77,11 +77,11 @@ export default function Destaques() {
             </div>
           ))}
         </div>
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-mcb-gray-50 to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-mcb-gray-50 to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-10 bg-gradient-to-r from-mcb-gray-50 to-transparent sm:w-24" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-mcb-gray-50 to-transparent sm:w-24" />
       </div>
 
-      <div className="mx-auto mt-14 max-w-7xl px-5 text-center sm:px-8">
+      <div className="mx-auto mt-12 max-w-7xl px-5 text-center sm:mt-14 sm:px-8">
         <Reveal>
           <Link to="/ambientes" className="btn-primary inline-flex bg-wood-500 text-white">
             Ver todos os projetos

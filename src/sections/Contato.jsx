@@ -56,26 +56,21 @@ export default function Contato() {
     }
     setStatus('enviando')
 
-    // Tenta salvar no Supabase (se configurado). O envio nunca trava o usuário:
-    // mesmo sem banco, seguimos para o WhatsApp.
     const res = await salvarLead(form)
     if (!res.ok && res.erro !== 'Supabase não configurado') {
-      // Erro real de banco — avisa mas ainda permite o WhatsApp
       setErro('Não foi possível registrar agora, mas você pode falar direto no WhatsApp abaixo.')
     }
 
     setStatus('ok')
-    // Abre o WhatsApp do Ademir automaticamente
     abrirWhatsApp(contatos[0].whatsapp)
   }
 
   return (
-    <section id="contato" className="relative overflow-hidden bg-mcb-gray-800 py-24 text-cream sm:py-32">
+    <section id="contato" className="relative overflow-hidden bg-mcb-gray-800 py-16 text-cream sm:py-24 lg:py-32">
       <div className="glow-wood pointer-events-none absolute -right-20 top-0 h-96 w-96 rounded-full blur-3xl opacity-50" />
 
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
-          {/* Lado esquerdo: info + WhatsApp direto */}
           <div>
             <Reveal>
               <span className="text-xs font-medium uppercase tracking-widest2 text-wood-300">
@@ -83,27 +78,26 @@ export default function Contato() {
               </span>
             </Reveal>
             <Reveal delay={0.1}>
-              <h2 className="mt-4 font-display text-4xl leading-tight sm:text-5xl">
+              <h2 className="mt-4 font-display text-3xl leading-tight sm:text-5xl">
                 Quer fazer um orçamento?
               </h2>
             </Reveal>
             <Reveal delay={0.15}>
-              <p className="mt-5 max-w-md text-lg leading-relaxed text-mcb-gray-300">
+              <p className="mt-5 max-w-md text-base leading-relaxed text-mcb-gray-300 sm:text-lg">
                 Conte o que você sonha e a gente projeta. Fale direto com a nossa
                 equipe pelo WhatsApp ou preencha o formulário.
               </p>
             </Reveal>
 
-            {/* Botões WhatsApp diretos */}
             <Reveal delay={0.2}>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-8 flex flex-col gap-3">
                 {contatos.map((c) => (
                   <button
                     key={c.whatsapp}
                     onClick={() => abrirWhatsApp(c.whatsapp)}
                     className="group flex flex-1 items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.04] p-4 text-left backdrop-blur transition-all duration-300 hover:-translate-y-0.5 hover:border-wood-500/40"
                   >
-                    <div className="flex h-11 w-11 items-center justify-center rounded-full bg-wood-500/15 text-wood-300 transition-colors group-hover:bg-wood-500 group-hover:text-white">
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-wood-500/15 text-wood-300 transition-colors group-hover:bg-wood-500 group-hover:text-white">
                       <MessageCircle size={20} />
                     </div>
                     <div>
@@ -117,16 +111,15 @@ export default function Contato() {
               </div>
             </Reveal>
 
-            {/* Dados de contato */}
             <Reveal delay={0.25}>
               <ul className="mt-10 space-y-4 text-mcb-gray-300">
                 <li className="flex items-center gap-3">
-                  <Phone size={18} className="text-wood-400" />
+                  <Phone size={18} className="shrink-0 text-wood-400" />
                   {empresa.telefoneFixo}
                 </li>
                 <li className="flex items-center gap-3">
-                  <Mail size={18} className="text-wood-400" />
-                  {empresa.email}
+                  <Mail size={18} className="shrink-0 text-wood-400" />
+                  <span className="break-all">{empresa.email}</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <MapPin size={18} className="mt-0.5 shrink-0 text-wood-400" />
@@ -136,11 +129,10 @@ export default function Contato() {
             </Reveal>
           </div>
 
-          {/* Lado direito: formulário */}
           <Reveal delay={0.15}>
             <form
               onSubmit={onSubmit}
-              className="rounded-3xl border border-white/10 bg-white/[0.04] p-7 backdrop-blur-md sm:p-9"
+              className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur-md sm:p-9"
             >
               {status === 'ok' ? (
                 <div className="flex min-h-[400px] flex-col items-center justify-center text-center">
@@ -176,6 +168,7 @@ export default function Contato() {
                     <Campo
                       label="Telefone / WhatsApp *"
                       name="telefone"
+                      type="tel"
                       value={form.telefone}
                       onChange={onChange}
                       placeholder="(55) 9 ..."

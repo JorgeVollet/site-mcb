@@ -27,7 +27,7 @@ const slugMap = {
 
 export default function Ambientes() {
   return (
-    <section id="ambientes" className="relative bg-cream py-24 sm:py-32">
+    <section id="ambientes" className="relative bg-cream py-16 sm:py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
           <div className="max-w-xl">
@@ -35,7 +35,7 @@ export default function Ambientes() {
               <span className="eyebrow">O que fazemos</span>
             </Reveal>
             <Reveal delay={0.1}>
-              <h2 className="mt-4 font-display text-4xl leading-tight text-ink sm:text-5xl">
+              <h2 className="mt-4 font-display text-3xl leading-tight text-ink sm:text-5xl">
                 Cada ambiente, sob medida
               </h2>
             </Reveal>
@@ -48,7 +48,7 @@ export default function Ambientes() {
           </Reveal>
         </div>
 
-        <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-5 sm:mt-16 sm:grid-cols-2 lg:grid-cols-3">
           {ambientes.map((a, i) => {
             const Icone = icones[a.icone]
             return (
