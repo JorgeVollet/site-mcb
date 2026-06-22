@@ -74,7 +74,15 @@ export default function Footer() {
             © {ano} {empresa.nome}. Todos os direitos reservados.
           </p>
           <p>
-            Marcenaria sob medida · {empresa.cidade}/{empresa.estado}
+            Site desenvolvido por{' '}
+            <a
+              href="https://www.jvwebstudio.agency"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-mcb-gray-300 transition-colors hover:text-wood-400"
+            >
+              JV WEB STUDIO
+            </a>
           </p>
         </div>
       </div>
