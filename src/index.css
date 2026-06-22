@@ -110,6 +110,19 @@ body {
   }
 }
 
+/* Marquee da marca (texto rolando de fora a fora) */
+@keyframes marquee-marca {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.animate-marquee-marca {
+  animation: marquee-marca 110s linear infinite;
+}
+
 /* Glow estatico de fundo das secoes */
 .glow-wood {
   background: radial-gradient(circle, rgba(180, 123, 83, 0.22) 0%, transparent 70%);

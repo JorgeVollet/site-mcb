@@ -1,6 +1,7 @@
 import { motion, useScroll, useSpring } from 'framer-motion'
 import Navbar from './components/Navbar'
 import WhatsAppFloat from './components/WhatsAppFloat'
+import MarqueeMarca from './components/MarqueeMarca'
 import Hero from './sections/Hero'
 import Sobre from './sections/Sobre'
 import Pilares from './sections/Pilares'
@@ -33,6 +34,7 @@ export default function App() {
         <Pilares />
         <Destaques />
         <Ambientes />
+        <MarqueeMarca />
         <Depoimentos />
         <Contato />
       </main>
