@@ -57,9 +57,11 @@ export default function Sobre() {
               </Reveal>
               <Reveal delay={0.2}>
                 <p>
-                  O que começou com as mãos de um só homem hoje vive em milhares
-                  de lares. E a cada projeto que entregamos, é um pedaço dessa
-                  história que entra na casa de quem confia na gente.
+                  O que começou com as mãos de um só homem há quase quatro
+                  décadas, hoje vive em milhares de lares. Quando você escolhe a
+                  Móveis Castelo Branco, se torna parte de nossa história, feita
+                  de detalhes, confiança, profissionalismo e orgulho de fazer
+                  bem feito.
                 </p>
               </Reveal>
               <Reveal delay={0.25}>
