@@ -125,7 +125,7 @@ export const pilares = [
   },
   {
     titulo: 'Personalidade',
-    descricao: 'Aquela área que você quer transformar ou o móvel que sempre sonhou? A MCB faz.',
+    descricao: 'Nenhum projeto é igual ao outro. Cada peça carrega a sua identidade, o seu jeito de viver — feita pra ser só sua.',
     icone: 'Fingerprint',
   },
   {

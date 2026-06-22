@@ -57,19 +57,19 @@ export default function Sobre() {
               </Reveal>
               <Reveal delay={0.2}>
                 <p>
-                  Produzimos móveis exclusivos, sob medida, tendo como
-                  matéria-prima principal o MDF. Hoje contamos com maquinários
-                  exclusivos, do mais moderno, e profissionais capacitados que
-                  garantem a excelência dos produtos, com projetistas
-                  especializados para desenvolver peças que vão deixar o seu
-                  ambiente perfeito.
+                  O que começou com as mãos de um só homem hoje vive em milhares
+                  de lares. E a cada projeto que entregamos, é um pedaço dessa
+                  história que entra na casa de quem confia na gente.
                 </p>
               </Reveal>
               <Reveal delay={0.25}>
                 <p>
-                  O que começou com as mãos de um só homem hoje vive em milhares
-                  de lares. E a cada projeto que entregamos, é um pedaço dessa
-                  história que entra na casa de quem confia na gente.
+                  Produzimos móveis exclusivos, sob medida, tendo como
+                  matéria-prima principal o MDF. Hoje contamos com os mais
+                  modernos e exclusivos maquinários e profissionais capacitados
+                  que garantem a excelência dos produtos, com projetistas
+                  especializados para desenvolver móveis que vão deixar o seu
+                  ambiente perfeito.
                 </p>
               </Reveal>
             </div>

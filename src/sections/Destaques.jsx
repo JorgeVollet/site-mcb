@@ -45,7 +45,7 @@ export default function Destaques() {
             </Reveal>
             <Reveal delay={0.1}>
               <h2 className="mt-4 font-display text-3xl leading-tight text-ink sm:text-5xl">
-                Destaques em movimento
+Destaques Móveis Castelo Branco
               </h2>
             </Reveal>
           </div>
