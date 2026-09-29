@@ -6,12 +6,14 @@ import AmbientesPage from './pages/AmbientesPage.jsx'
 import AmbientePage from './pages/AmbientePage.jsx'
 import ProjetoPage from './pages/ProjetoPage.jsx'
 import ScrollToTop from './components/ScrollToTop.jsx'
+import AvisoAgenda from './components/AvisoAgenda.jsx'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
       <ScrollToTop />
+      <AvisoAgenda />
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/ambientes" element={<AmbientesPage />} />
