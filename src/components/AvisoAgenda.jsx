@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { CalendarCheck, X, MessageCircle } from 'lucide-react'
 import { contatos } from '../lib/siteData'
+import { track } from '../lib/analytics'
 
 // ─── Configuração do aviso ───────────────────────────────────────────
 // Agenda fechada até essa data. Depois dela o pop-up some sozinho.
@@ -35,7 +36,10 @@ export default function AvisoAgenda() {
   // Abre logo após o carregamento
   useEffect(() => {
     if (new Date() > AGENDA_FECHADA_ATE || jaViu()) return
-    const t = setTimeout(() => setAberto(true), ATRASO_MS)
+    const t = setTimeout(() => {
+      setAberto(true)
+      track('aviso-agenda-exibido')
+    }, ATRASO_MS)
     return () => clearTimeout(t)
   }, [])
 

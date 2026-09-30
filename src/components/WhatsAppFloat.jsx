@@ -25,6 +25,7 @@ export default function WhatsAppFloat() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Falar no WhatsApp"
+          data-origem="botao-flutuante"
           initial={{ opacity: 0, scale: 0.6, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.6, y: 20 }}

@@ -8,6 +8,9 @@ import ProjetoPage from './pages/ProjetoPage.jsx'
 import ScrollToTop from './components/ScrollToTop.jsx'
 import AvisoAgenda from './components/AvisoAgenda.jsx'
 import './index.css'
+import { iniciarAnalytics } from './lib/analytics.js'
+
+iniciarAnalytics()
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

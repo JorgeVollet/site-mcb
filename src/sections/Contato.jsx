@@ -10,6 +10,7 @@ import {
 } from 'lucide-react'
 import Reveal from '../components/Reveal'
 import { salvarLead } from '../lib/supabase'
+import { track, trackWhatsApp } from '../lib/analytics'
 import { empresa, contatos, ambientes } from '../lib/siteData'
 
 const estadoInicial = {
@@ -42,7 +43,8 @@ export default function Contato() {
   const onChange = (e) =>
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }))
 
-  const abrirWhatsApp = (numero) => {
+  const abrirWhatsApp = (numero, origem = 'contato') => {
+    trackWhatsApp(numero, origem)
     const msg = montarMensagemWhats(form)
     window.open(`https://wa.me/${numero}?text=${msg}`, '_blank', 'noopener')
   }
@@ -55,6 +57,7 @@ export default function Contato() {
       return
     }
     setStatus('enviando')
+    track('orcamento-enviado', { ambiente: form.ambiente || 'não informado' })
 
     const res = await salvarLead(form)
     if (!res.ok && res.erro !== 'Supabase não configurado') {
@@ -62,7 +65,7 @@ export default function Contato() {
     }
 
     setStatus('ok')
-    abrirWhatsApp(contatos[0].whatsapp)
+    abrirWhatsApp(contatos[0].whatsapp, 'formulario')
   }
 
   return (
