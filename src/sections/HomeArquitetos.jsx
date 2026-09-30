@@ -30,8 +30,8 @@ export default function HomeArquitetos() {
             </div>
             <div className="relative min-h-[240px]">
               <img
-                src="/projetos/corporativo/escritorio-eme-arquitetura/01.jpg"
-                alt="Escritório de arquitetura com móveis sob medida produzidos pela Móveis Castelo Branco"
+                src="/fotos/sala-painel-tv-iluminado.jpg"
+                alt="Sala com painel de TV iluminado e móveis sob medida executados pela Móveis Castelo Branco"
                 loading="lazy"
                 className="absolute inset-0 h-full w-full object-cover"
               />

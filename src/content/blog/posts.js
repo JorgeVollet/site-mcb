@@ -536,8 +536,8 @@ posts.push({
     'Para arquitetos e designers de interiores: como escolher a marcenaria que vai executar o seu projeto com fidelidade, do projeto detalhado à montagem.',
   categoria: 'arquitetos',
   data: DATA,
-  capa: '/projetos/corporativo/escritorio-eme-arquitetura/01.jpg',
-  capaAlt: 'Escritório de arquitetura com móveis sob medida produzidos pela Móveis Castelo Branco',
+  capa: '/fotos/dormitorio-home-office-planejado.jpg',
+  capaAlt: 'Quarto com painel de TV, bancada de estudos, prateleiras e roupeiro sob medida executados pela Móveis Castelo Branco',
   ambiente: 'corporativo',
   faq: [
     {

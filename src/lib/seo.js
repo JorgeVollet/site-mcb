@@ -289,8 +289,8 @@ export function metaDaPagina(pathname) {
     return m({
       title: titulo(arquitetos.seoTitle),
       description: arquitetos.seoDescription,
-      image: abs('/projetos/corporativo/escritorio-eme-arquitetura/02.jpg'),
-      imageAlt: 'Móveis produzidos pela Móveis Castelo Branco para um escritório de arquitetura',
+      image: abs('/fotos/sala-painel-tv-iluminado.jpg'),
+      imageAlt: 'Sala com painel de TV iluminado e móveis sob medida executados pela Móveis Castelo Branco',
       extra: [
         breadcrumb([['Início', '/'], ['Para arquitetos', '/para-arquitetos']]),
         {
