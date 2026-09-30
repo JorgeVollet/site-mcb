@@ -52,7 +52,7 @@ export default function SobrePage() {
             <div className="relative overflow-hidden rounded-2xl shadow-soft">
               <img
                 src="/fotos/fachada-mcb.jpg"
-                alt="Fachada da fábrica da Móveis Castelo Branco na Rua São Pedro, em Três de Maio/RS"
+                alt="Fachada da fábrica da Móveis Castelo Branco em Três de Maio/RS"
                 className="w-full"
               />
             </div>

@@ -1,36 +1,38 @@
 // Página "Para arquitetos": a MCB executa projetos de arquitetos e designers
 // de interiores (confirmado pelo Jorge em 30/09/2026 — é foco da empresa).
+// Processo: o escritório entrega o projeto DETALHADO e a MCB executa
+// (fabrica e monta). A MCB NÃO faz desenho de produção/detalhamento nesse caso.
 // Regra de autoria: o projeto é do escritório; a MCB executa.
 
 export const arquitetos = {
   h1: 'Marcenaria para arquitetos e designers de interiores',
   seoTitle: 'Marcenaria de Alto Padrão para Arquitetos no Noroeste do RS',
   seoDescription:
-    'A Móveis Castelo Branco executa projetos de arquitetos e designers de interiores com fidelidade, inclusive os mais desafiadores. Projetistas próprios, fábrica em Três de Maio/RS e montagem com equipe própria.',
+    'A Móveis Castelo Branco executa projetos detalhados de arquitetos e designers de interiores com fidelidade, inclusive os mais desafiadores. Fábrica própria em Três de Maio/RS e montagem com equipe própria.',
   intro: [
     'Você desenha, a gente executa. A Móveis Castelo Branco produz projetos de arquitetos e designers de interiores com fidelidade ao desenho, inclusive aqueles que outras marcenarias preferem não pegar: curvas, ripados, recortes, peças até o teto, integrações com pedra, vidro, iluminação e eletrodomésticos.',
-    'Temos projetistas próprios, que conversam com o seu escritório sobre os detalhes técnicos de produção, fábrica própria em Três de Maio/RS e montagem com equipe própria e especializada. O móvel chega à obra como foi pensado e é montado nos mínimos detalhes.',
+    'O seu escritório entrega o projeto detalhado e a MCB executa: produção na nossa fábrica em Três de Maio/RS, em MDF de primeira linha, e montagem com equipe própria e especializada. O móvel chega à obra como foi projetado e é montado nos mínimos detalhes.',
   ],
   etapas: [
     {
-      titulo: 'Recebemos o seu projeto',
-      texto: 'Plantas, vistas, detalhamentos e referências de acabamento, no formato em que o seu escritório trabalha.',
+      titulo: 'Recebemos o projeto detalhado',
+      texto: 'Plantas, vistas, detalhamento de marcenaria e especificação de materiais, ferragens e acabamentos. O projeto precisa chegar detalhado: é a partir dele que executamos.',
     },
     {
       titulo: 'Visita técnica e medição',
-      texto: 'Nossa equipe vai à obra quantas vezes forem necessárias. Se entrarmos cedo, ajudamos a acertar pontos elétricos e hidráulicos com a marcenaria.',
+      texto: 'Nossa equipe vai à obra para medir e conferir o local. Se alguma medida da obra não bater com o projeto, avisamos o escritório antes de produzir.',
     },
     {
-      titulo: 'Desenho de produção',
-      texto: 'Nossos projetistas transformam o projeto em desenho de fábrica e levantam com você qualquer ponto técnico antes do corte.',
+      titulo: 'Orçamento',
+      texto: 'O orçamento é feito em cima do projeto detalhado, com os materiais e acabamentos especificados pelo escritório.',
     },
     {
       titulo: 'Aprovação',
-      texto: 'Nada vai para a produção sem a sua aprovação e a do cliente.',
+      texto: 'Nada vai para a produção sem a aprovação do escritório e do cliente.',
     },
     {
       titulo: 'Produção',
-      texto: 'Fabricação na nossa fábrica em Três de Maio, em MDF de primeira linha, com as ferragens e acabamentos especificados.',
+      texto: 'Fabricação na nossa fábrica em Três de Maio, em MDF de primeira linha, com as ferragens e acabamentos do projeto.',
     },
     {
       titulo: 'Montagem e entrega',
@@ -40,29 +42,29 @@ export const arquitetos = {
   compromissos: [
     {
       titulo: 'Fidelidade ao projeto',
-      texto: 'Executamos o que foi desenhado. Se algum detalhe precisar de ajuste técnico, a conversa é com você antes, nunca uma surpresa na obra.',
+      texto: 'Executamos o que foi detalhado. Se a obra mostrar alguma diferença em relação ao projeto, a conversa é com você antes, nunca uma surpresa na montagem.',
     },
     {
       titulo: 'Projetos difíceis são bem-vindos',
-      texto: 'Mais de três décadas de fábrica resolvendo o que não existe pronto: medidas fora do padrão, peças especiais e combinação de materiais.',
+      texto: 'Mais de três décadas de fábrica executando o que não existe pronto: medidas fora do padrão, peças especiais e combinação de materiais.',
     },
     {
       titulo: 'O projeto é seu',
       texto: 'Quando mostramos um trabalho executado a partir do seu projeto, o crédito do projeto é do seu escritório.',
     },
     {
-      titulo: 'Um interlocutor técnico',
-      texto: 'Você fala com quem entende de produção, não com um vendedor. Menos idas e vindas, menos retrabalho.',
+      titulo: 'Da fábrica à montagem, um só responsável',
+      texto: 'Fábrica própria e equipe de montagem própria: quem produz é quem monta, sem terceiros no meio.',
     },
   ],
   faq: [
     {
       p: 'A Móveis Castelo Branco executa projetos de arquitetos?',
-      r: 'Sim. Executar projetos de arquitetos e designers de interiores é um dos focos da MCB, inclusive os mais desafiadores. O projeto é do escritório; a MCB faz o desenho de produção, fabrica e monta.',
+      r: 'Sim. Executar projetos de arquitetos e designers de interiores é um dos focos da MCB, inclusive os mais desafiadores. O escritório entrega o projeto detalhado e a MCB fabrica e monta.',
     },
     {
-      p: 'Vocês fazem o detalhamento de produção?',
-      r: 'Nossos projetistas transformam o projeto do escritório em desenho de fábrica e alinham com você os pontos técnicos antes da produção.',
+      p: 'O projeto precisa vir detalhado?',
+      r: 'Sim. Trabalhamos a partir do projeto detalhado do escritório: plantas, vistas, detalhamento de marcenaria e especificação de materiais, ferragens e acabamentos. É isso que garante que o móvel saia como foi projetado.',
     },
     {
       p: 'Quem faz a montagem na obra?',

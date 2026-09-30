@@ -18,8 +18,8 @@ export default function HomeArquitetos() {
                 Você desenha, a gente executa. Até os projetos mais difíceis.
               </h2>
               <p className="relative mt-4 max-w-md leading-relaxed text-mcb-gray-300">
-                Fidelidade ao projeto, projetistas que falam a sua língua, fábrica própria e montagem com equipe
-                própria e especializada.
+                Você entrega o projeto detalhado, a gente executa com fidelidade: fábrica própria e montagem com
+                equipe própria e especializada.
               </p>
               <Link
                 to="/para-arquitetos"

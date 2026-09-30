@@ -60,7 +60,7 @@ function empresaSchema() {
     founder: { '@type': 'Person', name: empresa.fundador },
     address: {
       '@type': 'PostalAddress',
-      streetAddress: `${empresa.rua} - Bairro ${empresa.bairro}`,
+      streetAddress: empresa.rua,
       addressLocality: empresa.cidade,
       addressRegion: empresa.estado,
       postalCode: empresa.cep,

@@ -95,7 +95,7 @@ export default function ArquitetosPage() {
           <CtaOrcamento
             origem="arquitetos"
             titulo="Tem um projeto para executar?"
-            texto="Mande o projeto ou chame a gente para uma conversa técnica. Respondemos com quem entende de produção."
+            texto="Mande o projeto detalhado para a gente orçar e executar. Projetos difíceis são bem-vindos."
             mensagem="Olá! Trabalho com arquitetura/interiores, vim pelo site e gostaria de conversar sobre a execução de um projeto de marcenaria."
           />
         </div>

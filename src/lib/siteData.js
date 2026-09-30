@@ -7,20 +7,20 @@ export const empresa = {
   fundador: 'Ademir Luís Noronha',
   cidade: 'Três de Maio',
   estado: 'RS',
-  endereco: 'Rua São Pedro, 1120 — Bairro Castelo Branco, Três de Maio/RS',
+  endereco: 'Rua Leonel de Moura Brizola, Três de Maio/RS',
   telefoneFixo: '(55) 3535-8677',
   telefoneFixoE164: '+555535358677',
   email: 'ademirmcb@gmail.com',
   emailSecundario: 'luana_noronhamcb@hotmail.com',
-  rua: 'Rua São Pedro, 1120',
-  bairro: 'Castelo Branco',
+  // Endereço igual ao do Perfil da Empresa no Google (confirmado pelo Jorge em 30/09/2026)
+  rua: 'Rua Leonel de Moura Brizola',
   cep: '98910-000',
   instagram: 'https://www.instagram.com/moveiscastelobranco',
   instagramUser: '@moveiscastelobranco',
   horario: 'Segunda a sexta, das 8h às 18h',
   raioKm: 150,
   site: 'https://www.moveiscastelobranco.com.br',
-  mapa: 'https://www.google.com/maps/search/?api=1&query=M%C3%B3veis+Castelo+Branco%2C+Rua+S%C3%A3o+Pedro+1120%2C+Tr%C3%AAs+de+Maio+RS',
+  mapa: 'https://www.google.com/maps/search/?api=1&query=M%C3%B3veis+Castelo+Branco%2C+Tr%C3%AAs+de+Maio+RS',
 }
 
 // Anos de história contados a partir da fundação (atualiza sozinho todo ano)

@@ -533,7 +533,7 @@ posts.push({
   slug: 'marcenaria-para-projetos-de-arquitetura',
   titulo: 'Marcenaria para projetos de arquitetura: o que avaliar antes de indicar ao cliente',
   descricao:
-    'Para arquitetos e designers de interiores: como escolher a marcenaria que vai executar o seu projeto com fidelidade, do desenho de produção à montagem.',
+    'Para arquitetos e designers de interiores: como escolher a marcenaria que vai executar o seu projeto com fidelidade, do projeto detalhado à montagem.',
   categoria: 'arquitetos',
   data: DATA,
   capa: '/projetos/corporativo/escritorio-eme-arquitetura/01.jpg',
@@ -542,11 +542,11 @@ posts.push({
   faq: [
     {
       p: 'Como escolher uma marcenaria para executar um projeto de arquitetura?',
-      r: 'Avalie se ela tem fábrica, projetistas e montagem próprios, um interlocutor técnico, histórico com projetos difíceis, proposta com material e ferragens especificados e respeito à autoria do projeto.',
+      r: 'Avalie se ela tem fábrica e montagem próprias, se executa o detalhamento com fidelidade, se tem histórico com projetos difíceis, proposta com material e ferragens especificados e respeito à autoria do projeto.',
     },
     {
-      p: 'A marcenaria deve refazer o projeto do arquiteto?',
-      r: 'Não. Ela transforma o projeto em desenho de produção e alinha com o escritório os pontos técnicos antes do corte. O projeto continua sendo do escritório.',
+      p: 'O que a marcenaria precisa receber do arquiteto?',
+      r: 'O projeto detalhado: plantas, vistas, detalhamento de marcenaria e especificação de materiais, ferragens e acabamentos. É a partir dele que a marcenaria orça e executa.',
     },
   ],
 })

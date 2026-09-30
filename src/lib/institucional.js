@@ -103,7 +103,7 @@ export function perguntasFrequentes() {
     },
     {
       p: 'Vocês trabalham com arquitetos?',
-      r: 'Sim. Executamos projetos de arquitetos e designers de interiores com fidelidade ao desenho, com projetistas que conversam com o escritório sobre os detalhes técnicos e montagem com equipe própria.',
+      r: 'Sim. O escritório entrega o projeto detalhado e a MCB executa com fidelidade ao desenho: produção na nossa fábrica e montagem com equipe própria e especializada.',
     },
     {
       p: 'Quando devo chamar a marcenaria durante a obra?',

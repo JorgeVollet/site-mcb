@@ -90,7 +90,7 @@ const llms = [
   '- Preço: não trabalha com preço de tabela; cada projeto tem orçamento próprio, feito após visitas, medição e projeto',
   '- Pagamento: trabalha com financiamento, principalmente pelo Sicredi',
   '- Montagem: feita por equipe própria e especializada',
-  '- Arquitetos: executa projetos de arquitetos e designers de interiores com fidelidade ao desenho, inclusive os mais desafiadores; projetistas próprios fazem o desenho de produção',
+  '- Arquitetos: executa projetos de arquitetos e designers de interiores com fidelidade ao desenho, inclusive os mais desafiadores; o escritório entrega o projeto detalhado e a MCB fabrica e monta',
   '',
   '## O que faz',
   ...m.ambientes.map((a) => {
