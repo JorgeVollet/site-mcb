@@ -9,9 +9,33 @@ export const empresa = {
   estado: 'RS',
   endereco: 'Rua São Pedro, 1120 — Bairro Castelo Branco, Três de Maio/RS',
   telefoneFixo: '(55) 3535-8677',
+  telefoneFixoE164: '+555535358677',
   email: 'ademirmcb@gmail.com',
   emailSecundario: 'luana_noronhamcb@hotmail.com',
+  rua: 'Rua São Pedro, 1120',
+  bairro: 'Castelo Branco',
+  cep: '98910-000',
+  instagram: 'https://www.instagram.com/moveiscastelobranco',
+  instagramUser: '@moveiscastelobranco',
+  horario: 'Segunda a sexta, das 8h às 18h',
+  raioKm: 150,
+  site: 'https://www.moveiscastelobranco.com.br',
+  mapa: 'https://www.google.com/maps/search/?api=1&query=M%C3%B3veis+Castelo+Branco%2C+Rua+S%C3%A3o+Pedro+1120%2C+Tr%C3%AAs+de+Maio+RS',
 }
+
+// Anos de história contados a partir da fundação (atualiza sozinho todo ano)
+export const anosDeHistoria = () => new Date().getFullYear() - empresa.fundacao
+
+// Cidades da região atendida (raio de ~150 km a partir de Três de Maio).
+// As primeiras são as que mais aparecem nas buscas do Google.
+export const cidadesAtendidas = [
+  'Três de Maio', 'Santa Rosa', 'Horizontina', 'Ijuí', 'Santo Ângelo', 'Três Passos',
+  'Giruá', 'Panambi', 'Cruz Alta', 'Tucunduva', 'Boa Vista do Buricá', 'Alegria',
+  'Independência', 'Santo Cristo', 'Tuparendi', 'Crissiumal', 'Humaitá', 'Cândido Godói',
+  'São José do Inhacorá', 'Doutor Maurício Cardoso', 'Porto Mauá', 'Novo Machado',
+  'Cerro Largo', 'Tenente Portela', 'São Luiz Gonzaga', 'Catuípe', 'Ajuricaba',
+  'Condor', 'Palmeira das Missões', 'Campina das Missões',
+]
 
 // Contatos para o botão de WhatsApp (números sem máscara, com DDI 55)
 export const contatos = [
@@ -164,7 +188,7 @@ export const depoimentos = [
 // Estatísticas com count-up: numero = valor final, prefixo/sufixo opcionais.
 // Quando "texto" é definido, mostra texto fixo (sem contador).
 export const estatisticas = [
-  { numero: 37, prefixo: '+', label: 'anos de história' },
+  { numero: anosDeHistoria(), label: 'anos de história' },
   { numero: 100, sufixo: '%', label: 'sob medida' },
   { numero: 2500, prefixo: '+', label: 'projetos entregues' },
   { texto: 'Referência', label: 'em planejados na região' },

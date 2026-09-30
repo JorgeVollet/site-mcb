@@ -4,7 +4,10 @@ import { ArrowUpRight } from 'lucide-react'
 import Navbar from '../components/Navbar'
 import Footer from '../sections/Footer'
 import WhatsAppFloat from '../components/WhatsAppFloat'
+import Breadcrumbs from '../components/Breadcrumbs'
+import CtaOrcamento from '../components/CtaOrcamento'
 import { ambientes } from '../lib/ambientesData'
+import { conteudoDoAmbiente } from '../lib/ambientesConteudo'
 
 export default function AmbientesPage() {
   return (
@@ -12,14 +15,16 @@ export default function AmbientesPage() {
       <Navbar />
       <main className="bg-cream pt-28 sm:pt-32">
         <section className="mx-auto max-w-7xl px-5 pb-16 sm:px-8 sm:pb-24 lg:pb-32">
-          <div className="text-center">
+          <Breadcrumbs itens={[['Início', '/'], ['Ambientes']]} />
+          <div className="mt-6 text-center">
             <span className="eyebrow">Nossos trabalhos</span>
             <h1 className="mt-4 font-display text-4xl leading-tight text-ink sm:text-6xl">
-              Ambientes
+              Ambientes e projetos
             </h1>
-            <p className="mx-auto mt-5 max-w-xl text-base text-mcb-gray-600 sm:text-lg">
-              Explore nossos projetos por ambiente. Cada espaço, pensado e
-              executado sob medida.
+            <p className="mx-auto mt-5 max-w-2xl text-base text-mcb-gray-600 sm:text-lg">
+              Cozinhas, dormitórios e roupeiros, closets, salas, banheiros e móveis para empresas: veja os projetos
+              que a Móveis Castelo Branco produziu sob medida em Três de Maio e região. Cada espaço, pensado e
+              executado para quem vai usar.
             </p>
           </div>
 
@@ -38,7 +43,7 @@ export default function AmbientesPage() {
                 >
                   <img
                     src={amb.capa}
-                    alt={amb.nome}
+                    alt={conteudoDoAmbiente(amb.slug)?.h1 || amb.nome}
                     loading="lazy"
                     className="absolute inset-0 h-full w-full rounded-xl object-cover transition-transform duration-700 group-hover:scale-105"
                   />
@@ -46,7 +51,7 @@ export default function AmbientesPage() {
                   <div className="absolute inset-x-0 bottom-0 p-6">
                     <div className="flex items-end justify-between border-t border-white/10 pt-4">
                       <div>
-                        <h3 className="font-display text-2xl text-white">{amb.nome}</h3>
+                        <h2 className="font-display text-2xl text-white">{amb.nome}</h2>
                         <p className="mt-1 text-sm text-white/70">
                           {amb.projetos.length}{' '}
                           {amb.projetos.length === 1 ? 'projeto' : 'projetos'}
@@ -60,6 +65,10 @@ export default function AmbientesPage() {
                 </Link>
               </motion.div>
             ))}
+          </div>
+
+          <div className="mt-20">
+            <CtaOrcamento origem="ambientes" />
           </div>
         </section>
       </main>

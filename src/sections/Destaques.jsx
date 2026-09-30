@@ -5,7 +5,7 @@ import Reveal from '../components/Reveal'
 
 const destaques = Array.from({ length: 14 }, (_, i) => ({
   src: `/destaques/destaque-${String(i + 1).padStart(2, '0')}.jpg`,
-  alt: `Projeto Moveis Castelo Branco ${i + 1}`,
+  alt: `Móveis planejados feitos pela Móveis Castelo Branco, destaque ${i + 1}`,
 }))
 
 export default function Destaques() {

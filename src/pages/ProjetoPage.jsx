@@ -1,11 +1,15 @@
 import { useState, useEffect, useCallback } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ArrowLeft, X, ChevronLeft, ChevronRight, MessageCircle } from 'lucide-react'
+import { X, ChevronLeft, ChevronRight, MessageCircle, ArrowUpRight } from 'lucide-react'
 import Navbar from '../components/Navbar'
 import Footer from '../sections/Footer'
 import WhatsAppFloat from '../components/WhatsAppFloat'
+import Breadcrumbs from '../components/Breadcrumbs'
+import NotFoundPage from './NotFoundPage'
 import { getProjeto } from '../lib/ambientesData'
+import { descricaoDoProjeto } from '../lib/projetosConteudo'
+import { conteudoDoAmbiente } from '../lib/ambientesConteudo'
 import { contatos } from '../lib/siteData'
 
 export default function ProjetoPage() {
@@ -39,24 +43,13 @@ export default function ProjetoPage() {
     }
   }, [lightbox, fechar, anterior, proximo])
 
-  if (!data) {
-    return (
-      <>
-        <Navbar />
-        <main className="flex min-h-[60vh] items-center justify-center bg-cream pt-32 text-center">
-          <div>
-            <h1 className="font-display text-3xl text-ink">Projeto não encontrado</h1>
-            <Link to="/ambientes" className="mt-4 inline-block text-wood-600 hover:underline">
-              Voltar para ambientes
-            </Link>
-          </div>
-        </main>
-        <Footer />
-      </>
-    )
-  }
+  if (!data) return <NotFoundPage />
 
   const { ambiente: amb, projeto: proj } = data
+  const descricao = descricaoDoProjeto(amb.slug, proj.slug)
+  const ambTitulo = conteudoDoAmbiente(amb.slug)?.h1 || amb.nome
+  const outros = amb.projetos.filter((p) => p.slug !== proj.slug).slice(0, 3)
+  const altFoto = (i) => `${proj.nome} (${amb.nome.toLowerCase()} sob medida), foto ${i + 1} de ${fotos.length}`
   const msg = encodeURIComponent(
     `Olá! Vim pelo site e gostaria de um orçamento parecido com o projeto "${proj.nome}".`
   )
@@ -66,12 +59,9 @@ export default function ProjetoPage() {
       <Navbar />
       <main className="bg-cream pt-32">
         <section className="mx-auto max-w-7xl px-5 pb-24 sm:px-8 sm:pb-32">
-          <Link
-            to={`/ambientes/${amb.slug}`}
-            className="inline-flex items-center gap-2 text-sm font-medium uppercase tracking-widest text-mcb-gray-500 transition-colors hover:text-wood-600"
-          >
-            <ArrowLeft size={16} /> {amb.nome}
-          </Link>
+          <Breadcrumbs
+            itens={[['Início', '/'], ['Ambientes', '/ambientes'], [amb.nome, `/ambientes/${amb.slug}`], [proj.nome]]}
+          />
 
           <div className="mt-6 flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
             <div>
@@ -79,6 +69,11 @@ export default function ProjetoPage() {
               <h1 className="mt-3 font-display text-4xl leading-tight text-ink sm:text-5xl">
                 {proj.nome}
               </h1>
+              {descricao && (
+                <p className="mt-4 max-w-2xl text-base leading-relaxed text-mcb-gray-600 sm:text-lg">
+                  {descricao}
+                </p>
+              )}
             </div>
             <a
               href={`https://wa.me/${contatos[0].whatsapp}?text=${msg}`}
@@ -104,13 +99,44 @@ export default function ProjetoPage() {
               >
                 <img
                   src={foto}
-                  alt={`${proj.nome} ${i + 1}`}
+                  alt={altFoto(i)}
                   loading="lazy"
                   className="w-full transition-transform duration-700 group-hover:scale-105"
                 />
               </motion.button>
             ))}
           </div>
+
+          {outros.length > 0 && (
+            <div className="mt-20">
+              <div className="flex flex-wrap items-end justify-between gap-4">
+                <h2 className="font-display text-2xl text-ink sm:text-3xl">Outros projetos de {amb.nome.toLowerCase()}</h2>
+                <Link to={`/ambientes/${amb.slug}`} className="font-medium text-wood-600 underline-offset-4 hover:underline">
+                  Ver tudo em {ambTitulo}
+                </Link>
+              </div>
+              <div className="mt-6 grid gap-5 sm:grid-cols-3">
+                {outros.map((p) => (
+                  <Link
+                    key={p.slug}
+                    to={`/ambientes/${amb.slug}/${p.slug}`}
+                    className="group relative block h-60 overflow-hidden rounded-xl bg-neutral-900"
+                  >
+                    <img
+                      src={p.fotos[0]}
+                      alt={`${p.nome}: ${amb.nome.toLowerCase()} sob medida`}
+                      loading="lazy"
+                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                    <span className="absolute inset-x-0 bottom-0 flex items-center justify-between p-5 font-display text-lg text-white">
+                      {p.nome} <ArrowUpRight size={16} />
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
         </section>
       </main>
 
@@ -158,7 +184,7 @@ export default function ProjetoPage() {
             <motion.img
               key={fotos[lightbox]}
               src={fotos[lightbox]}
-              alt={`${proj.nome} ${lightbox + 1}`}
+              alt={altFoto(lightbox)}
               initial={{ opacity: 0, scale: 0.96 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3 }}

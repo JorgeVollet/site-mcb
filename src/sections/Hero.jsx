@@ -31,8 +31,8 @@ export default function Hero() {
       >
         <img
           src="/fotos/hero-sala.jpg"
-          alt=""
-          aria-hidden="true"
+          alt="Sala de estar com painel de TV ripado, lareira e móveis sob medida da Móveis Castelo Branco"
+          fetchpriority="high"
           className="h-full w-full object-cover"
         />
       </motion.div>
@@ -75,8 +75,8 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-cream/90 drop-shadow-[0_1px_10px_rgba(0,0,0,0.6)] sm:mt-8 sm:text-lg"
         >
-          Móveis sob medida, feitos nos mínimos detalhes — do clássico ao
-          moderno.
+          Móveis planejados e sob medida em Três de Maio/RS, feitos nos
+          mínimos detalhes — do clássico ao moderno.
         </motion.p>
 
         <motion.div

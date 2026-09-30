@@ -38,3 +38,6 @@ _video_*
 public/fotos/ChatGPT*.png
 public/fotos/[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]-*.png
 public/fotos/faixadamcb.png
+
+# Build das páginas prontas (pré-renderização)
+dist-server

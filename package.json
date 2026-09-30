@@ -6,7 +6,8 @@
   "description": "Site institucional da Móveis Castelo Branco - marcenaria sob medida em Três de Maio/RS",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && vite build --ssr src/entry-server.jsx --outDir dist-server && node scripts/prerender.mjs",
+    "build:spa": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -14,6 +15,7 @@
     "framer-motion": "^11.5.4",
     "gsap": "^3.13.0",
     "lucide-react": "^0.445.0",
+    "marked": "^15.0.12",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^7.1.0"

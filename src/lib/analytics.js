@@ -80,7 +80,7 @@ function onClickGlobal(e) {
   if (href.startsWith('mailto:')) return track('email', { origem, pagina })
   if (/instagram\.com/.test(href)) return track('instagram', { origem, pagina })
   if (/facebook\.com/.test(href)) return track('facebook', { origem, pagina })
-  if (/#contato$/.test(href)) return track('botao-orcamento', { origem, pagina })
+  if (/#contato$/.test(href) || href === '/contato') return track('botao-orcamento', { origem, pagina })
 }
 
 let iniciado = false

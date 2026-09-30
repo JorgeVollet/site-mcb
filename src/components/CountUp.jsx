@@ -12,7 +12,9 @@ export default function CountUp({
   className = '',
 }) {
   const ref = useRef(null)
-  const [valor, setValor] = useState(0)
+  // Começa no valor final: o HTML gerado no build (Google/IAs) mostra o número
+  // certo. No navegador o efeito zera e anima antes do bloco aparecer.
+  const [valor, setValor] = useState(to)
 
   useEffect(() => {
     const el = ref.current

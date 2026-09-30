@@ -1,7 +1,9 @@
 import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import Reveal from '../components/Reveal'
-import { empresa } from '../lib/siteData'
+import { Link } from 'react-router-dom'
+import { ArrowRight } from 'lucide-react'
+import { empresa, anosDeHistoria } from '../lib/siteData'
 
 export default function Sobre() {
   const ref = useRef(null)
@@ -41,7 +43,7 @@ export default function Sobre() {
             </Reveal>
             <Reveal delay={0.1}>
               <h2 className="mt-4 font-display text-3xl leading-tight text-ink sm:text-5xl">
-                Quase 40 anos fazendo parte da história
+                {anosDeHistoria()} anos fazendo parte da história
               </h2>
             </Reveal>
 
@@ -57,8 +59,8 @@ export default function Sobre() {
               </Reveal>
               <Reveal delay={0.2}>
                 <p>
-                  O que começou com as mãos de um só homem há quase quatro
-                  décadas, hoje vive em milhares de lares. Quando você escolhe a
+                  O que começou com as mãos de um só homem há{' '}
+                  {anosDeHistoria()} anos, hoje vive em milhares de lares da região. Quando você escolhe a
                   Móveis Castelo Branco, se torna parte de nossa história, feita
                   de detalhes, confiança, profissionalismo e orgulho de fazer
                   bem feito.
@@ -66,8 +68,8 @@ export default function Sobre() {
               </Reveal>
               <Reveal delay={0.25}>
                 <p>
-                  Produzimos móveis exclusivos, sob medida, tendo como
-                  matéria-prima principal o MDF. Hoje contamos com os mais
+                  Produzimos móveis exclusivos, sob medida, em MDF de
+                  primeira linha. Hoje contamos com os mais
                   modernos e exclusivos maquinários e profissionais capacitados
                   que garantem a excelência dos produtos, com projetistas
                   especializados para desenvolver móveis que vão deixar o seu
@@ -84,6 +86,14 @@ export default function Sobre() {
                   exige qualidade.
                 </p>
               </div>
+            </Reveal>
+            <Reveal delay={0.35}>
+              <Link
+                to="/sobre"
+                className="mt-8 inline-flex items-center gap-2 text-sm font-medium uppercase tracking-widest text-wood-600 transition-colors hover:text-wood-700"
+              >
+                Conheça a nossa história <ArrowRight size={16} />
+              </Link>
             </Reveal>
           </div>
         </div>

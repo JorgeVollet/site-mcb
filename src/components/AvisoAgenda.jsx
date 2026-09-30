@@ -3,11 +3,10 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { CalendarCheck, X, MessageCircle } from 'lucide-react'
 import { contatos } from '../lib/siteData'
 import { track } from '../lib/analytics'
+import { AGENDA_FECHADA_ATE, DATA_LIMITE_TEXTO } from '../lib/agenda'
 
 // ─── Configuração do aviso ───────────────────────────────────────────
-// Agenda fechada até essa data. Depois dela o pop-up some sozinho.
-const AGENDA_FECHADA_ATE = new Date('2027-03-30T23:59:59-03:00')
-const DATA_LIMITE_TEXTO = '30 de março de 2027'
+// Datas da agenda ficam em src/lib/agenda.js. Depois delas o pop-up some sozinho.
 // Mostra 1x por sessão (fecha o navegador → aparece de novo na próxima visita)
 const CHAVE_SESSAO = 'mcb-aviso-agenda-visto'
 const ATRASO_MS = 700

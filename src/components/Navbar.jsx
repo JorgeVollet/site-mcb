@@ -6,11 +6,11 @@ import Logo from './Logo'
 import { ambientes } from '../lib/ambientesData'
 
 const links = [
-  { label: 'Sobre', target: '#sobre', type: 'hash' },
+  { label: 'Sobre', target: '/sobre', type: 'route' },
   { label: 'Ambientes', target: '/ambientes', type: 'route' },
-  { label: 'Portfólio', target: '#portfolio', type: 'hash' },
-  { label: 'Depoimentos', target: '#depoimentos', type: 'hash' },
-  { label: 'Contato', target: '#contato', type: 'hash' },
+  { label: 'Como funciona', target: '/como-funciona', type: 'route' },
+  { label: 'Blog', target: '/blog', type: 'route' },
+  { label: 'Contato', target: '/contato', type: 'route' },
 ]
 
 export default function Navbar() {
@@ -28,6 +28,7 @@ export default function Navbar() {
   }, [])
 
   const hashHref = (target) => (naHome ? target : `/${target}`)
+  const hrefOrcamento = naHome ? '#contato' : '/contato'
 
   const renderLink = (l, className, onClick) => {
     if (l.type === 'route') {
@@ -60,7 +61,7 @@ export default function Navbar() {
           <Logo className="h-9 sm:h-10" variant={scrolled || !naHome ? 'dark' : 'light'} />
         </Link>
 
-        <ul className="hidden items-center gap-8 lg:flex">
+        <ul className="hidden items-center gap-7 lg:flex">
           {links.map((l) => {
             const linkClass = `group relative inline-flex items-center gap-1 text-sm font-medium tracking-wide transition-colors ${
               scrolled || !naHome
@@ -118,7 +119,7 @@ export default function Navbar() {
         </ul>
 
         <a
-          href={hashHref('#contato')}
+          href={hrefOrcamento}
           className={`hidden items-center gap-2 rounded-full px-6 py-3 text-xs font-medium uppercase tracking-widest transition-all duration-300 hover:shadow-glow lg:inline-flex ${
             scrolled || !naHome
               ? 'bg-ink text-cream hover:bg-wood-600'
@@ -173,7 +174,7 @@ export default function Navbar() {
               </li>
               <li>
                 <a
-                  href={hashHref('#contato')}
+                  href={hrefOrcamento}
                   onClick={() => setAberto(false)}
                   className="mt-2 inline-flex w-full items-center justify-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-medium uppercase tracking-widest text-cream"
                 >

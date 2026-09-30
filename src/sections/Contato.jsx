@@ -7,9 +7,11 @@ import {
   Check,
   Loader2,
   MessageCircle,
+  Clock,
+  Instagram,
 } from 'lucide-react'
 import Reveal from '../components/Reveal'
-import { salvarLead } from '../lib/supabase'
+import { salvarLead, preaquecerSupabase } from '../lib/supabase'
 import { track, trackWhatsApp } from '../lib/analytics'
 import { empresa, contatos, ambientes } from '../lib/siteData'
 
@@ -126,7 +128,29 @@ export default function Contato() {
                 </li>
                 <li className="flex items-start gap-3">
                   <MapPin size={18} className="mt-0.5 shrink-0 text-wood-400" />
-                  {empresa.endereco}
+                  <a
+                    href={empresa.mapa}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transition-colors hover:text-wood-300"
+                  >
+                    {empresa.endereco}
+                  </a>
+                </li>
+                <li className="flex items-center gap-3">
+                  <Clock size={18} className="shrink-0 text-wood-400" />
+                  {empresa.horario} · sábado fechado
+                </li>
+                <li className="flex items-center gap-3">
+                  <Instagram size={18} className="shrink-0 text-wood-400" />
+                  <a
+                    href={empresa.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transition-colors hover:text-wood-300"
+                  >
+                    {empresa.instagramUser}
+                  </a>
                 </li>
               </ul>
             </Reveal>
@@ -135,6 +159,7 @@ export default function Contato() {
           <Reveal delay={0.15}>
             <form
               onSubmit={onSubmit}
+              onFocus={preaquecerSupabase}
               className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur-md sm:p-9"
             >
               {status === 'ok' ? (
