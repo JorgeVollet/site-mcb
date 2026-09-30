@@ -29,6 +29,6 @@ Contrato claro, prazo por escrito, projeto aprovado antes da produção, materia
 
 ## A Móveis Castelo Branco
 
-A MCB é uma marcenaria com fábrica própria em Três de Maio/RS, fundada em 1989 por Ademir Luís Noronha. Temos projetistas próprios, fazemos visitas e medições, fabricamos em MDF de primeira linha e fazemos a montagem, com garantia vitalícia. Atendemos Três de Maio, Santa Rosa, Horizontina, Ijuí e a [região num raio de cerca de 150 km](/regiao-atendida).
+A MCB é uma marcenaria com fábrica própria em Três de Maio/RS, fundada em 1989 por Ademir Luís Noronha. Temos projetistas próprios, fazemos visitas e medições, fabricamos em MDF de primeira linha e montamos com equipe própria e especializada, com garantia vitalícia. Também executamos projetos de arquitetos e designers de interiores, inclusive os mais desafiadores. Atendemos Três de Maio, Santa Rosa, Horizontina, Ijuí e a [região num raio de cerca de 150 km](/regiao-atendida).
 
 Conheça [a nossa história](/sobre) e [como trabalhamos](/como-funciona).

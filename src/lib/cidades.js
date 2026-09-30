@@ -11,7 +11,7 @@ export const paginasCidade = [
     seoDescription:
       'Móveis planejados sob medida em Santa Rosa/RS: cozinhas, roupeiros, banheiros, closets e móveis para empresas, com visitas, medição, projeto e montagem. MCB, desde 1989.',
     intro: [
-      'A Móveis Castelo Branco fica em Três de Maio, vizinha de Santa Rosa, e atende a cidade com o mesmo processo completo que usa em casa: visitas e medições no local, projeto feito pelos nossos projetistas, produção na nossa fábrica e montagem.',
+      'A Móveis Castelo Branco fica em Três de Maio, vizinha de Santa Rosa, e atende a cidade com o mesmo processo completo que usa em casa: visitas e medições no local, projeto feito pelos nossos projetistas, produção na nossa fábrica e montagem com equipe própria e especializada.',
       'Para quem mora em Santa Rosa, isso quer dizer ter a fábrica perto: fácil de conversar, de acompanhar o projeto e de ter alguém por perto depois da entrega.',
     ],
     blocos: [

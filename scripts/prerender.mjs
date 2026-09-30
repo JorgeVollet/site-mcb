@@ -73,7 +73,7 @@ const link = (titulo, url, desc) => `- [${titulo}](${m.SITE}${url})${desc ? `: $
 const llms = [
   `# ${e.nome}`,
   '',
-  `> Marcenaria de móveis planejados e sob medida em ${e.cidade}/${e.estado}, fundada em ${e.fundacao} por ${e.fundador}. Projeto feito por projetistas próprios, visitas e medições no local, móveis em MDF de primeira linha e garantia vitalícia. Atende ${e.cidade} e cidades num raio de cerca de ${e.raioKm} km no noroeste do Rio Grande do Sul.`,
+  `> Marcenaria de móveis planejados e sob medida em ${e.cidade}/${e.estado}, fundada em ${e.fundacao} por ${e.fundador}. Atende clientes finais e arquitetos/designers de interiores. Projetistas próprios, visitas e medições no local, móveis em MDF de primeira linha, montagem com equipe própria e garantia vitalícia. Atende ${e.cidade} e cidades num raio de cerca de ${e.raioKm} km no noroeste do Rio Grande do Sul.`,
   '',
   '## Fatos',
   `- Nome: ${e.nome} (MCB)`,
@@ -89,6 +89,8 @@ const llms = [
   '- Garantia: vitalícia nos móveis fabricados, com condições no contrato',
   '- Preço: não trabalha com preço de tabela; cada projeto tem orçamento próprio, feito após visitas, medição e projeto',
   '- Pagamento: trabalha com financiamento, principalmente pelo Sicredi',
+  '- Montagem: feita por equipe própria e especializada',
+  '- Arquitetos: executa projetos de arquitetos e designers de interiores com fidelidade ao desenho, inclusive os mais desafiadores; projetistas próprios fazem o desenho de produção',
   '',
   '## O que faz',
   ...m.ambientes.map((a) => {
@@ -101,6 +103,7 @@ const llms = [
   link('Como funciona', '/como-funciona', 'etapas do primeiro contato à montagem'),
   link('Perguntas frequentes', '/perguntas-frequentes'),
   link('Região atendida', '/regiao-atendida'),
+  link('Para arquitetos e designers de interiores', '/para-arquitetos', 'execução de projetos de arquitetura, inclusive os mais desafiadores'),
   link('Móveis planejados em Santa Rosa/RS', '/moveis-planejados-santa-rosa'),
   link('Contato e orçamento', '/contato'),
   '',

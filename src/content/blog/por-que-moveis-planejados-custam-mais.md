@@ -12,7 +12,7 @@ Móveis planejados custam mais que móveis prontos porque são desenhados e fabr
 
 **Fabricação.** Corte, colagem de fita, furação, usinagem, montagem de gavetas, acabamento.
 
-**Montagem e ajustes.** A equipe instala, nivela, alinha portas e gavetas e faz os acabamentos finais no local.
+**Montagem e ajustes.** A equipe instala, nivela, alinha portas e gavetas e faz os acabamentos finais no local. Na MCB, a montagem é feita por equipe própria e especializada.
 
 **Garantia e assistência.** A empresa responde pelo que fabricou.
 

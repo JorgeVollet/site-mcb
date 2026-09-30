@@ -88,7 +88,7 @@ export default function RegiaoPage() {
             <h2 className="font-display text-2xl text-ink sm:text-3xl">Como é o atendimento fora de Três de Maio</h2>
             <p className="mt-4">
               É o mesmo processo de sempre: primeiro contato pelo WhatsApp, visitas e medições no seu endereço,
-              projeto feito pelos nossos projetistas, produção na fábrica e montagem no local.
+              projeto feito pelos nossos projetistas, produção na fábrica e montagem no local com a nossa equipe própria.
             </p>
             <Link to="/como-funciona" className="mt-4 inline-block font-medium text-wood-600 underline-offset-4 hover:underline">
               Veja como funciona

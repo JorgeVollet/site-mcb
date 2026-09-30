@@ -8,6 +8,7 @@ import { conteudoDoAmbiente } from './ambientesConteudo'
 import { descricaoDoProjeto } from './projetosConteudo'
 import { perguntasFrequentes } from './institucional'
 import { paginasCidade, getPaginaCidade } from './cidades'
+import { arquitetos } from './arquitetos'
 import { posts, getPost, categorias } from '../content/blog/posts'
 
 export const SITE = empresa.site
@@ -27,6 +28,7 @@ export function rotas() {
     '/perguntas-frequentes',
     '/contato',
     '/regiao-atendida',
+    '/para-arquitetos',
     '/blog',
   ]
   for (const amb of ambientes) {
@@ -48,7 +50,7 @@ function empresaSchema() {
     alternateName: 'MCB Móveis Castelo Branco',
     slogan: 'Perfeição na medida do seu sonho',
     description:
-      'Marcenaria de móveis planejados e sob medida em Três de Maio/RS, fundada em 1989 por Ademir Luís Noronha. Projeto próprio, MDF de primeira linha e garantia vitalícia.',
+      'Marcenaria de móveis planejados e sob medida em Três de Maio/RS, fundada em 1989 por Ademir Luís Noronha. Projetistas próprios, execução de projetos de arquitetos, MDF de primeira linha, montagem com equipe própria e garantia vitalícia.',
     url: `${SITE}/`,
     logo: abs('/logo-mcb-full.png'),
     image: [abs(IMG_PADRAO), abs('/fotos/fachada-mcb.jpg')],
@@ -85,6 +87,8 @@ function empresaSchema() {
     knowsAbout: [
       'Móveis planejados',
       'Móveis sob medida',
+      'Marcenaria de alto padrão',
+      'Execução de projetos de arquitetura e interiores',
       'Cozinha planejada',
       'Roupeiro planejado',
       'Closet planejado',
@@ -245,7 +249,7 @@ export function metaDaPagina(pathname) {
     return m({
       title: titulo('Como Funciona: do Primeiro Contato à Montagem'),
       description:
-        'Visitas e medições, projeto com projetistas próprios, orçamento, produção em MDF de primeira linha, montagem e garantia vitalícia. Veja como a MCB trabalha.',
+        'Visitas e medições, projeto com projetistas próprios, orçamento, produção em MDF de primeira linha, montagem com equipe própria e garantia vitalícia.',
       extra: [breadcrumb([['Início', '/'], ['Como funciona', '/como-funciona']])],
     })
   }
@@ -278,6 +282,28 @@ export function metaDaPagina(pathname) {
       title: titulo('Região Atendida: Três de Maio, Santa Rosa, Ijuí e Noroeste do RS'),
       description: `A Móveis Castelo Branco atende Três de Maio e cidades num raio de cerca de ${empresa.raioKm} km: Santa Rosa, Horizontina, Ijuí, Santo Ângelo, Três Passos e região.`,
       extra: [breadcrumb([['Início', '/'], ['Região atendida', '/regiao-atendida']])],
+    })
+  }
+
+  if (path === '/para-arquitetos') {
+    return m({
+      title: titulo(arquitetos.seoTitle),
+      description: arquitetos.seoDescription,
+      image: abs('/projetos/corporativo/escritorio-eme-arquitetura/02.jpg'),
+      imageAlt: 'Móveis produzidos pela Móveis Castelo Branco para um escritório de arquitetura',
+      extra: [
+        breadcrumb([['Início', '/'], ['Para arquitetos', '/para-arquitetos']]),
+        {
+          '@type': 'Service',
+          name: 'Execução de marcenaria para projetos de arquitetura e interiores',
+          serviceType: 'Marcenaria sob medida',
+          provider: { '@id': `${SITE}/#empresa` },
+          audience: { '@type': 'BusinessAudience', audienceType: 'Arquitetos e designers de interiores' },
+          areaServed: 'Noroeste do Rio Grande do Sul',
+          url: abs('/para-arquitetos'),
+        },
+        faqSchema(arquitetos.faq),
+      ],
     })
   }
 

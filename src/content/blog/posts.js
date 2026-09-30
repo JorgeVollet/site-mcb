@@ -11,6 +11,7 @@ export const categorias = {
   ambientes: 'Ideias por ambiente',
   cuidados: 'Cuidados',
   comercial: 'Lojas e empresas',
+  arquitetos: 'Para arquitetos',
 }
 
 const DATA = '2026-09-30'
@@ -526,6 +527,29 @@ export const posts = [
     ],
   },
 ]
+
+// ─── Para arquitetos ──────────────────────────────────
+posts.push({
+  slug: 'marcenaria-para-projetos-de-arquitetura',
+  titulo: 'Marcenaria para projetos de arquitetura: o que avaliar antes de indicar ao cliente',
+  descricao:
+    'Para arquitetos e designers de interiores: como escolher a marcenaria que vai executar o seu projeto com fidelidade, do desenho de produção à montagem.',
+  categoria: 'arquitetos',
+  data: DATA,
+  capa: '/projetos/corporativo/escritorio-eme-arquitetura/01.jpg',
+  capaAlt: 'Escritório de arquitetura com móveis sob medida produzidos pela Móveis Castelo Branco',
+  ambiente: 'corporativo',
+  faq: [
+    {
+      p: 'Como escolher uma marcenaria para executar um projeto de arquitetura?',
+      r: 'Avalie se ela tem fábrica, projetistas e montagem próprios, um interlocutor técnico, histórico com projetos difíceis, proposta com material e ferragens especificados e respeito à autoria do projeto.',
+    },
+    {
+      p: 'A marcenaria deve refazer o projeto do arquiteto?',
+      r: 'Não. Ela transforma o projeto em desenho de produção e alinha com o escritório os pontos técnicos antes do corte. O projeto continua sendo do escritório.',
+    },
+  ],
+})
 
 export function getPost(slug) {
   return posts.find((p) => p.slug === slug) || null

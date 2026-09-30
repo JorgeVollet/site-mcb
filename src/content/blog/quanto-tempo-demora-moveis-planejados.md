@@ -40,4 +40,4 @@ Mesmo que a medição final seja no fim da obra, vale chamar a marcenaria no com
 
 Se você tem data para mudar, comece a conversa com a marcenaria meses antes. O projeto pode ser feito com calma durante a obra, e a produção entra na agenda assim que a medição final estiver pronta.
 
-Na Móveis Castelo Branco o processo é completo: várias visitas e medições, projeto feito por projetistas próprios, produção na nossa fábrica em Três de Maio e montagem. Veja [como funciona](/como-funciona) ou [fale com a gente](/contato).
+Na Móveis Castelo Branco o processo é completo: várias visitas e medições, projeto feito por projetistas próprios, produção na nossa fábrica em Três de Maio e montagem com equipe própria e especializada. Veja [como funciona](/como-funciona) ou [fale com a gente](/contato).

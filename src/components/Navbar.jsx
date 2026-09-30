@@ -9,6 +9,7 @@ const links = [
   { label: 'Sobre', target: '/sobre', type: 'route' },
   { label: 'Ambientes', target: '/ambientes', type: 'route' },
   { label: 'Como funciona', target: '/como-funciona', type: 'route' },
+  { label: 'Arquitetos', target: '/para-arquitetos', type: 'route' },
   { label: 'Blog', target: '/blog', type: 'route' },
   { label: 'Contato', target: '/contato', type: 'route' },
 ]
@@ -61,7 +62,7 @@ export default function Navbar() {
           <Logo className="h-9 sm:h-10" variant={scrolled || !naHome ? 'dark' : 'light'} />
         </Link>
 
-        <ul className="hidden items-center gap-7 lg:flex">
+        <ul className="hidden items-center gap-6 xl:gap-7 lg:flex">
           {links.map((l) => {
             const linkClass = `group relative inline-flex items-center gap-1 text-sm font-medium tracking-wide transition-colors ${
               scrolled || !naHome

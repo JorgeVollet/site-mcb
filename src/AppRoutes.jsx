@@ -9,6 +9,7 @@ import FaqPage from './pages/FaqPage.jsx'
 import ContatoPage from './pages/ContatoPage.jsx'
 import RegiaoPage from './pages/RegiaoPage.jsx'
 import CidadePage from './pages/CidadePage.jsx'
+import ArquitetosPage from './pages/ArquitetosPage.jsx'
 import BlogPage from './pages/BlogPage.jsx'
 import BlogPostPage from './pages/BlogPostPage.jsx'
 import NotFoundPage from './pages/NotFoundPage.jsx'
@@ -35,6 +36,7 @@ export default function AppRoutes() {
         <Route path="/perguntas-frequentes" element={<FaqPage />} />
         <Route path="/contato" element={<ContatoPage />} />
         <Route path="/regiao-atendida" element={<RegiaoPage />} />
+        <Route path="/para-arquitetos" element={<ArquitetosPage />} />
         {paginasCidade.map((c) => (
           <Route key={c.slug} path={`/${c.slug}`} element={<CidadePage slug={c.slug} />} />
         ))}

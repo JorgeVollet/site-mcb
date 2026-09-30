@@ -7,6 +7,7 @@ const navItens = [
   { label: 'Sobre', to: '/sobre' },
   { label: 'Ambientes e projetos', to: '/ambientes' },
   { label: 'Como funciona', to: '/como-funciona' },
+  { label: 'Para arquitetos', to: '/para-arquitetos' },
   { label: 'Perguntas frequentes', to: '/perguntas-frequentes' },
   { label: 'Blog', to: '/blog' },
   { label: 'Região atendida', to: '/regiao-atendida' },

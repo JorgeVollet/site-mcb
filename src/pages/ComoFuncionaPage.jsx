@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Ruler, PenTool, Layers, ShieldCheck, Landmark } from 'lucide-react'
+import { Ruler, PenTool, Layers, ShieldCheck, Landmark, Wrench } from 'lucide-react'
 import Pagina from '../components/Pagina'
 import Breadcrumbs from '../components/Breadcrumbs'
 import CtaOrcamento from '../components/CtaOrcamento'
@@ -10,6 +10,7 @@ import { getPost } from '../content/blog/posts'
 const diferenciais = [
   { Icone: Ruler, titulo: 'Várias visitas e medições', texto: 'Medimos quantas vezes for preciso, e a medição final é feita com a obra pronta.' },
   { Icone: PenTool, titulo: 'Projetistas próprios', texto: 'O projeto é desenhado pela nossa equipe, junto com você, antes de qualquer corte.' },
+  { Icone: Wrench, titulo: 'Montagem com equipe própria', texto: 'Equipe própria e especializada, que entrega o móvel montado e ajustado nos mínimos detalhes.' },
   { Icone: Layers, titulo: 'MDF de primeira linha', texto: 'Nos móveis planejados usamos só MDF de primeira linha, e MDF resistente à umidade nas áreas molhadas.' },
   { Icone: ShieldCheck, titulo: 'Garantia vitalícia', texto: 'Os móveis que fabricamos têm garantia vitalícia, com as condições no contrato.' },
   { Icone: Landmark, titulo: 'Financiamento', texto: 'Trabalhamos com financiamento, principalmente pelo Sicredi.' },
@@ -30,8 +31,12 @@ export default function ComoFuncionaPage() {
           <h1 className="mt-3 font-display text-4xl leading-tight text-ink sm:text-6xl">Como funciona</h1>
           <p className="mt-5 text-base leading-relaxed text-mcb-gray-600 sm:text-lg">
             Na Móveis Castelo Branco o processo é completo: visitas e medições, projeto feito pelos nossos
-            projetistas, orçamento em cima do seu projeto, produção na nossa fábrica em Três de Maio, montagem e
-            garantia vitalícia. Não trabalhamos com preço de tabela: cada projeto tem um preço único, porque é feito
+            projetistas, orçamento em cima do seu projeto, produção na nossa fábrica em Três de Maio, montagem com
+            equipe própria e especializada e garantia vitalícia. Se você é arquiteto ou designer, veja também{' '}
+            <Link to="/para-arquitetos" className="font-medium text-wood-600 underline-offset-4 hover:underline">
+              como executamos o seu projeto
+            </Link>
+            . Não trabalhamos com preço de tabela: cada projeto tem um preço único, porque é feito
             para a sua casa.
           </p>
         </header>
@@ -48,7 +53,7 @@ export default function ComoFuncionaPage() {
 
         <section className="mt-24">
           <h2 className="font-display text-3xl text-ink sm:text-4xl">O que você tem com a MCB</h2>
-          <ul className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
+          <ul className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {diferenciais.map(({ Icone, titulo, texto }) => (
               <li key={titulo}>
                 <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-wood-500/10 text-wood-600">

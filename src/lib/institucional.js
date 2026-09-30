@@ -44,7 +44,7 @@ export const etapas = [
   {
     titulo: 'Entrega e montagem',
     texto:
-      'Os móveis são instalados, nivelados e ajustados no local, e tudo é conferido com você.',
+      'A montagem é feita pela nossa equipe própria e especializada: móveis instalados, nivelados e ajustados nos mínimos detalhes, e tudo conferido com você.',
   },
   {
     titulo: 'Garantia vitalícia',
@@ -65,7 +65,11 @@ export function perguntasFrequentes() {
     },
     {
       p: 'Vocês fazem o projeto dos móveis?',
-      r: 'Sim. A MCB tem projetistas próprios, que desenham cada ambiente depois das visitas e medições. Também produzimos a partir do projeto do seu arquiteto ou designer.',
+      r: 'Sim. A MCB tem projetistas próprios, que desenham cada ambiente depois das visitas e medições. Também executamos projetos de arquitetos e designers de interiores, inclusive os mais desafiadores.',
+    },
+    {
+      p: 'Quem faz a montagem dos móveis?',
+      r: 'A nossa equipe própria e especializada. O móvel é entregue montado, nivelado e ajustado nos mínimos detalhes.',
     },
     {
       p: 'Qual material vocês usam?',
@@ -96,6 +100,10 @@ export function perguntasFrequentes() {
     {
       p: 'Vocês fazem móveis para empresas?',
       r: 'Fazemos. Já produzimos móveis para lojas de roupas, padaria, chopperia, consultório e escritórios.',
+    },
+    {
+      p: 'Vocês trabalham com arquitetos?',
+      r: 'Sim. Executamos projetos de arquitetos e designers de interiores com fidelidade ao desenho, com projetistas que conversam com o escritório sobre os detalhes técnicos e montagem com equipe própria.',
     },
     {
       p: 'Quando devo chamar a marcenaria durante a obra?',

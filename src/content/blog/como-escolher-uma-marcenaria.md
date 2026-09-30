@@ -50,4 +50,4 @@ Deve ter a descrição dos móveis, os materiais, as ferragens, o valor, a forma
 
 ## Na Móveis Castelo Branco
 
-Desde 1989 em Três de Maio/RS, com fábrica própria, projetistas, visitas e medições, MDF de primeira linha, montagem e garantia vitalícia. Conheça [a nossa história](/sobre), veja [como trabalhamos](/como-funciona) e [os projetos entregues](/ambientes).
+Desde 1989 em Três de Maio/RS, com fábrica própria, projetistas, visitas e medições, MDF de primeira linha, montagem com equipe própria e especializada e garantia vitalícia. Conheça [a nossa história](/sobre), veja [como trabalhamos](/como-funciona) e [os projetos entregues](/ambientes).

@@ -9,6 +9,7 @@ import Ambientes from './sections/Ambientes'
 import Destaques from './sections/Destaques'
 import Depoimentos from './sections/Depoimentos'
 import HomeGuias from './sections/HomeGuias'
+import HomeArquitetos from './sections/HomeArquitetos'
 import HomeFaq from './sections/HomeFaq'
 import Contato from './sections/Contato'
 import Footer from './sections/Footer'
@@ -36,6 +37,7 @@ export default function App() {
         <Pilares />
         <Destaques />
         <Ambientes />
+        <HomeArquitetos />
         <MarqueeMarca />
         <Depoimentos />
         <HomeGuias />
